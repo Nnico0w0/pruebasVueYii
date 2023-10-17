@@ -45,14 +45,14 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'class' => 'yii\rest\UrlRule',
+                'controller' => 'apiv1',
             ],
         ],
-        */
     ],
     'modules' => [
         'apiv1' => [
