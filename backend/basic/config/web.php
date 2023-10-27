@@ -16,7 +16,7 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '9sjSzPPSDXXiYG8Sqo1rfsb1x5YWEZSB',
             'parsers' => [
-                'aplication/json' => 'yii\web\JsonParser'
+                'application/json' => 'yii\web\JsonParser'
             ]
         ],
         'cache' => [
@@ -50,13 +50,14 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'class' => 'yii\rest\UrlRule',
-                'controller' => 'apiv1',
+                'pluralize' => 'false',
+                'controller' => 'apiv1\carrera','apiv1\profesor','apiv1\materia','apiv1\aula','apiv1\reservaaula','apiv1\horariomateria',
             ],
         ],
     ],
     'modules' => [
-        'apiv1' => [
-            'class' => 'app\modules\apiv1\Apiv1Module',
+                'apiv1' => [
+            'class' => 'app\modules\apiv1\Apiv1Modules',
         ],
     ],
     'params' => $params,
