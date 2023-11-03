@@ -45,15 +45,18 @@ $config = [
             ],
         ],
         'db' => $db,
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-                'class' => 'yii\rest\UrlRule',
-                'pluralize' => 'false',
-                'controller' => 'apiv1\carrera','apiv1\profesor','apiv1\materia','apiv1\aula','apiv1\reservaaula','apiv1\horariomateria',
-            ],
+'urlManager' => [
+    'enablePrettyUrl' => true,
+    'showScriptName' => false,
+    'rules' => [
+        [
+            'class' => 'yii\rest\UrlRule',
+            'pluralize' => false,
+            'controller' => ['apiv1/carrera', 'apiv1/profesor', 'apiv1/materia', 'apiv1/aula', 'apiv1/reservaaula', 'apiv1/horariomateria']
         ],
+    ],
+],
+
     ],
     'modules' => [
                 'apiv1' => [

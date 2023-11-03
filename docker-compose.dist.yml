@@ -26,5 +26,6 @@ services:
     volumes:
       - ./backend/composer/cache:/root/.composer/cache:delegated
       - ./backend/basic:/app:delegated
+
     ports:
       - '8000:80'

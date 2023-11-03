@@ -1,3 +1,4 @@
 data/pgdata*
 backend/composer/cache*
 docker-compose.yml
+mybin
